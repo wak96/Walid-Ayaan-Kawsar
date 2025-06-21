@@ -82,6 +82,30 @@ DATABASES = {
 }
 
 
+# Render database
+
+
+import os
+import dj_database_url
+
+if os.environ.get('RENDER'):
+    DATABASES = {
+        'default': dj_database_url.config(default=os.environ['postgresql://walid_ayaan_kawsar_user:gr5UqAyWjBA4YpqXvInYOu2oo0FARiYV@dpg-d1bac7gdl3ps73efj8lg-a/walid_ayaan_kawsar'])
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / "db.sqlite3",
+        }
+    }
+
+
+
+
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
