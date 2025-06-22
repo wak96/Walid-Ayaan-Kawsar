@@ -89,8 +89,9 @@ import os
 import dj_database_url
 
 if os.environ.get('RENDER'):
+
     DATABASES = {
-        'default': dj_database_url.config(default=os.environ['postgresql://postgres:[1234.com]@db.wgzdusubrhkolqmanvnl.supabase.co:5432/postgres'])
+        'default': dj_database_url.config(default='postgresql://postgres:1234.com@db.wgzdusubrhkolqmanvnl.supabase.co:5432/postgres')
     }
 else:
     DATABASES = {
