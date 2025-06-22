@@ -88,19 +88,18 @@ DATABASES = {
 import os
 import dj_database_url
 
-if os.environ.get('RENDER'):  # When deploying to Render
+if os.environ.get('RENDER'):
     DATABASES = {
-        'default': dj_database_url.config(
-            default=os.environ['DATABASE_URL']  # Render automatically sets this
-        )
+        'default': dj_database_url.config(default=os.environ['DATABASE_URL'])
     }
-else:  # Local development fallback
+else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+
 
 
 
