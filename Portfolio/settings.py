@@ -91,7 +91,7 @@ import dj_database_url
 if os.environ.get('RENDER'):
 
     DATABASES = {
-        'default': dj_database_url.config(default='postgresql://postgres:1234.com@db.wgzdusubrhkolqmanvnl.supabase.co:5432/postgres')
+        'default': dj_database_url.config(default='postgresql://details_owner:npg_XuDQPjHYk06R@ep-lingering-scene-a11yjuce-pooler.ap-southeast-1.aws.neon.tech/details?sslmode=require')
     }
 else:
     DATABASES = {
