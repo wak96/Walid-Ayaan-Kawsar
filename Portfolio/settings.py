@@ -144,10 +144,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+
+
+import os
+
+STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
-    BASE_DIR, "static"
+    os.path.join(BASE_DIR, 'static'),  # যদি আপনার source static ফাইল থাকে
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # collectstatic এখানে কপি করবে
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
