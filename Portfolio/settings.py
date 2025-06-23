@@ -44,16 +44,6 @@ INSTALLED_APPS = [
 
 
 
-CLOUDINARY_STORAGE = {
-  'CLOUD_NAME': 'kawsar',
-  'API_KEY': '936591955183888',
-  'API_SECRET': '3ILiN-SNraRS3tU_5syLlu93vqE',
-}
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-
-
 
 
 MIDDLEWARE = [
@@ -167,8 +157,21 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = BASE_DIR/'Media'
+
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR/'Media'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+
+CLOUDINARY_STORAGE = {
+  'CLOUD_NAME': 'danzhjiew',
+  'API_KEY': '936591955183888',
+  'API_SECRET': '3ILiN-SNraRS3tU_5syLlu93vqE',
+}
+
+
 
 
 CSRF_TRUSTED_ORIGINS = [
