@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&t5$cketqnql#@zmgm-()w4lp^t-sd^l9_9=h-moqp7--#o-_f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['walid-ayaan-kawsar.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -162,6 +162,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 
