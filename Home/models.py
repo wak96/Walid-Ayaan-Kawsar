@@ -26,3 +26,12 @@ class Services(models.Model):
 
 class Profile(models.Model):
     picture = models.ImageField(upload_to='images/', default='images/default.jpg')
+
+
+class Photo(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='photos/')
+
+    def __str__(self):
+        return self.title
+
