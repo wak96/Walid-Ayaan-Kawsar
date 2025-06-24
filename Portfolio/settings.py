@@ -166,11 +166,11 @@ MEDIA_ROOT = BASE_DIR/'Media'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'danzhjiew',
-    'API_KEY': '936591955183888',
-    'API_SECRET': '3ILiN-SNraRS3tU_5syLlu93vqE',
-}
+#CLOUDINARY_STORAGE = {
+    #'CLOUD_NAME': 'danzhjiew',
+    #'API_KEY': '936591955183888',
+    #'API_SECRET': '3ILiN-SNraRS3tU_5syLlu93vqE',
+#}
 
 
 CLOUDINARY_STORAGE = {
